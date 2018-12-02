@@ -1,4 +1,4 @@
-module Day1
+module Day1.Day1
     ( run
     ) where
 import Data.List
@@ -13,7 +13,7 @@ folder acc el  =
 
 run :: IO ()
 run = do 
-    s <- readFile "src/input.txt"
+    s <- readFile "src/Day1/input"
     let stringsToInts = map (read :: String -> Int)
     let numbers = stringsToInts $ map removePluses $ lines s 
     
